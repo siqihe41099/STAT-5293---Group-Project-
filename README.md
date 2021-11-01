@@ -3,9 +3,9 @@
 In this model, we try to reproduce the model established by Li Ma in his paper "Personal Identification Based on Iris Texture Analysis". 
 We divide the Iris Recognition into three parts consisting of six functions. <br />
 1. Image Processing <br />
-⋅⋅* Iris Localization. 
-⋅⋅* Iris Normalization
-⋅⋅* Image Enhancement
+- Iris Localization
+- Iris Normalization
+- Image Enhancement
 Second, we norma
 ## Briefly discuss the limitation(s) of the current design. How can you improve it?
 ## Peer evaluation form
