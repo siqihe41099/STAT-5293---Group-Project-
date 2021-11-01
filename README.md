@@ -3,15 +3,29 @@
 ## Briefly discuss the limitation(s) of the current design. How can you improve it?
 ## Peer evaluation form
 ####Iris Localization 
-Weiyi Jiang: \\
-Dawei He: \\
-Siqi He: \\
+Weiyi Jiang: <br />
+Dawei He: <br />
+Siqi He: <br />
+#### ImageEnhancement
+Weiyi Jiang: <br />
+Dawei He: <br />
+Siqi He: <br />
+#### FeatureExtraction
+Weiyi Jiang: <br />
+Dawei He: <br />
+Siqi He: <br />
+#### IrisMatching
+Weiyi Jiang: <br />
+Dawei He: <br />
+Siqi He: <br />
+#### PerformanceEvaluation
+Weiyi Jiang: <br />
+Dawei He: <br />
+Siqi He: <br />
+#### Others
+Weiyi Jiang: <br />
+Dawei He: <br />
+Siqi He: <br />
 
 
 
-
-| IrisNomalization | ImageEnhancement | FeatureExtraction | IrisMatching | PerformanceEvaluation | Others | 
-| ---- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Weiyi Jiang  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-| Dawei He  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-| Siqi He  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
