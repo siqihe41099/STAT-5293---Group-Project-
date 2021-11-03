@@ -27,6 +27,7 @@ def irisNormalization(x_i, y_i, r_i, x_p, y_p, r_p, img_in):
 
   return(normalized)
 
+#imgRotate is to calculate the rotated image
 def imgRotate(img_in, degree):
   move = abs(int(512*degree/360))
   if degree > 0:
