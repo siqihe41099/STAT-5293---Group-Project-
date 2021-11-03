@@ -22,3 +22,10 @@ def irisNormalization(x_i, y_i, r_i, x_p, y_p, r_p, img_in):
       normalized[i, j] = img_in[int(y), int(x)]
 
   return(normalized)
+
+def imgRotate(img_in, degree):
+  move = abs(int(512*degree/360))
+  if degree > 0:
+    return np.hstack([img_in[:,move:], img_in[:,:move]] )
+  else:
+    return np.hstack([img_in[:,(512 - move):], img_in[:,:(512 - move)]] 
