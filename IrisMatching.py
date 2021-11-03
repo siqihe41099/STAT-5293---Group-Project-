@@ -1,4 +1,4 @@
-from sklearn.neighbors.nearest_centroid import NearestCentroid
+from sklearn.neighbors import NearestCentroid
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as lda
 import cv2
 import numpy as np
