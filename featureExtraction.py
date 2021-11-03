@@ -1,3 +1,8 @@
+import cv2
+import numpy as np
+import scipy.signal
+
+
 # Defined fillter
 def gabor(x, y, f, dx, dy):
   return(1/(2*np.pi*dx*dy)*np.exp(-1/2*((x**2/dx**2)+(y**2/dy**2)))*np.cos(2*np.pi*f*np.sqrt(x**2+y**2)))
