@@ -51,7 +51,7 @@ def irisRecognition(imgs_train,imgs_test):
   y_train = np.repeat(np.linspace(1,108, num=108).astype(int), size_degrees*3)
   y_test = np.repeat(np.linspace(1,108, num=108).astype(int), 4)
 
-  # create CRR graph, 
+  # create CRR graph, CRR table, ROC curve
   performanceEvaluation(x_train, y_train, x_test, y_test)
 
 imgs_train= [cv2.imread(file, cv2.IMREAD_GRAYSCALE) for file in sorted(glob.glob('datasets/CASIA Iris Image Database (version 1.0)/*/1/*.bmp'))]
