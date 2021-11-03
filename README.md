@@ -12,14 +12,15 @@ We bound the cornea region by creating a 130x130 region centered at the pupil's 
 - Iris Normalization <br />
 Project the iris image into the new coordinate system given by Li to get the normalized image. After running the irisNormalization function, we will get 7 normzlied image by setting the initial angle values as -9, -6, -3, 0, 3, 6, and 9 degrees. In this way, we create more train sets which can make our model more robust. <br />
 - Image Enhancement <br />
-We need to consider the illumination effects to the normalized image. So we subtract estimated background illumination from the normalized image. Then use histogram equalization to improve the contrast of the image. <br />
+We need to consider the illumination effects to the normalized image. So we subtract estimated background illumination from the normalized image. Then use histogram equalization to improve the contrast of the image. However, in our results, it shows that when we do not do hist equlization, the correcteness reaches the highest point.<br />
 2. Feature Extraction <br />
 Define the region of interest as 48X512 size. In this way, we can find regions closer to the pupil, which contain useful texture information for recognization. Then we use defined filters to obtain the filtered image. Finally, we etract statistical features (mean and standard deviation) in each 8x8 small block of the filtered images to form vectors for later iris matching.
  3. Iris Matching <br />
 We use LDA to reduce dimensionality and train the model. Then use the established model to classify the test dataset and check the correctness of our model.
 ## Briefly discuss the limitation(s) of the current design. How can you improve it?
-Our outer circle's boundary is not tight. It contains parts of the sclera area. It leads to the result that the normalization results is not so good. We haven't come up with an idea to solve it.
+1. Our outer circle's boundary is not tight. It contains parts of the sclera area. It leads to the result that the normalization results is not so good. We haven't come up with an idea to solve it.
+2. Hist Equalization doesn't work in our project, but we still do not understand why.
 ## Peer evaluation form
 We did the group project and wrote those functions together. We all participated in brainstorming, searching materials, picking threshold and writing the functions. We did not separate the missions. Everyone in the group is responsible and willing to contribute to final work. 
 
-Siqi He: <br />
+
