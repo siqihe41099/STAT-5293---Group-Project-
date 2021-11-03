@@ -1,3 +1,7 @@
+import cv2
+import numpy as np
+
+
 def irisNormalization(x_i, y_i, r_i, x_p, y_p, r_p, img_in):
   # I_n is a M x N (64 x 512 in this experiment) normalized image
   M, N = 64, 512
