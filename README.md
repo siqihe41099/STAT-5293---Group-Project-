@@ -10,7 +10,7 @@ We use two different methods to find the right center and radius of pupil. We bl
 To find the outer boundary:  <br />. 
 We bound the cornea region by creating a 130x130 region centered at the pupil's center. Then we gaussian blur the input image and utilize edge detection to binarize the cornea region. After it, we cover the pupil size to avoid HoughCircles() finds the inner circle. By setting the minRadius and maxRadius, HoughCircles() finds the outer circle's boundary. <br />
 - Iris Normalization <br />
-Project the iris image into the new coordinate system given by Li to get the normalized image. After running the irisNormalization function, we will get 7 normzlied image by setting the initial angle values as -9, -6, -3, 0, 3, 6, and 9 degrees. In this way, we create more train sets which can make our model more robust. <br />
+Project the iris image into the new coordinate system given by Li to get the normalized image. After running the irisNormalization function, we will get 7 normzlied image by setting the initial angle values as different degrees. In this way, we create more train sets which can make our model more robust. Even though, based on the Li Ma's paper, the setting is -9, -6, -3, -1, 0, 3, 6, 9, according to our observation, we set the degrees as -5, -4, -3, -2, -1, 1, 2, 3, 4, 5.  <br />
 - Image Enhancement <br />
 We need to consider the illumination effects to the normalized image. So we subtract estimated background illumination from the normalized image. Then use histogram equalization to improve the contrast of the image. However, in our results, it shows that when we do not do hist equlization, the correcteness reaches the highest point.<br />
 2. Feature Extraction <br />
@@ -19,7 +19,7 @@ Define the region of interest as 48X512 size. In this way, we can find regions c
 We use LDA to reduce dimensionality and train the model. Then use the established model to classify the test dataset and check the correctness of our model.
 ## Briefly discuss the limitation(s) of the current design. How can you improve it?
 1. Our outer circle's boundary is not tight. It contains parts of the sclera area. It leads to the result that the normalization results is not so good. We haven't come up with an idea to solve it.
-2. Hist Equalization doesn't work in our project, but we still do not understand why.
+2. Hist Equalization doesn't work in our project, but if we do image quality accessment before image processing may solve the problem.
 ## Peer evaluation form
 We did the group project and wrote those functions together. We all participated in brainstorming, searching materials, picking threshold and writing the functions. We did not separate the missions. Everyone in the group is responsible and willing to contribute to final work. 
 
