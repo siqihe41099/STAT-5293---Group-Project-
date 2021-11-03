@@ -1,3 +1,6 @@
+import cv2
+import numpy as np
+
 def irisEnhancement(normalized):
   M, N = 64, 512
   # approximate intensity variation
