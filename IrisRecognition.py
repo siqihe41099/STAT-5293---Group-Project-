@@ -4,12 +4,13 @@ import matplotlib.pyplot as plt
 from sklearn.neighbors import NearestCentroid
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as lda
 
-from IrisLocalization  import *
+from IrisLocalization import *
 from IrisNormalization import *
 from IrisEnhancement import *
 from FeatureExtraction import *
-from IrisMatching      import *
-from PerformanceEnvaluation import *
+from IrisMatching import *
+from PerformanceEvaluation import *
+import glob
 
 def irisRecognition(imgs_train,imgs_test):
   size_train = len(imgs_train)
@@ -54,6 +55,7 @@ def irisRecognition(imgs_train,imgs_test):
   # create CRR graph, CRR table, ROC curve
   performanceEvaluation(x_train, y_train, x_test, y_test)
 
-imgs_train= [cv2.imread(file, cv2.IMREAD_GRAYSCALE) for file in sorted(glob.glob('datasets/CASIA Iris Image Database (version 1.0)/*/1/*.bmp'))]
-imgs_test= [cv2.imread(file, cv2.IMREAD_GRAYSCALE) for file in sorted(glob.glob('datasets/CASIA Iris Image Database (version 1.0)/*/2/*.bmp'))]
-irisRecognition(imgs_train,imgs_test)
+if __name__ == "__main__":
+  imgs_train= [cv2.imread(file, cv2.IMREAD_GRAYSCALE) for file in sorted(glob.glob('datasets/CASIA Iris Image Database (version 1.0)/*/1/*.bmp'))]
+  imgs_test= [cv2.imread(file, cv2.IMREAD_GRAYSCALE) for file in sorted(glob.glob('datasets/CASIA Iris Image Database (version 1.0)/*/2/*.bmp'))]
+  irisRecognition(imgs_train,imgs_test)
