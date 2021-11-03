@@ -32,4 +32,4 @@ def imgRotate(img_in, degree):
   if degree > 0:
     return np.hstack([img_in[:,move:], img_in[:,:move]] )
   else:
-    return np.hstack([img_in[:,(512 - move):], img_in[:,:(512 - move)]] 
+    return np.hstack([img_in[:,(512 - move):], img_in[:,:(512 - move)]])
