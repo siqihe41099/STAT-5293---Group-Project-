@@ -1,6 +1,6 @@
 from prettytable import PrettyTable
 import cv2
-import matplotlib.pyplot as ply
+import matplotlib.pyplot as plt
 from irisMatching import *
 
 from prettytable import PrettyTable
