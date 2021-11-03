@@ -30,10 +30,10 @@ def performanceEvaluation(x_train, y_train, x_test, y_test):
   print(table)
 
   # Draw ROC
-  sim = np.zeros((x_test_r.shape[0], centroids_r.shape[0]))
+  sim = np.zeros((x_test_r.shape[0], x_train_r.shape[0]))
   for i in range(sim.shape[0]): # 432
     for j in range(sim.shape[1]): # 108
-      sim[i, j] = 1 - scipy.spatial.distance.cosine(x_test_r[i], centroids_r[j])
+      sim[i, j] = 1 - scipy.spatial.distance.cosine(x_test_r[i], x_train_r[j])
   fmr = []
   fnmr = []
   thresholds = np.linspace(0.4, 0.8, 20)
@@ -45,12 +45,12 @@ def performanceEvaluation(x_train, y_train, x_test, y_test):
     for i in range(sim.shape[0]):
       for j in range(sim.shape[1]):
         if sim[i,j] < thres:
-          if y_test[i] == j+1:
+          if y_test[i] == y_train[j]:
             fn += 1        
           else:
             tn += 1 
         else:  
-          if y_test[i] != j+1:
+          if y_test[i] != y_train[j]:
             fp += 1          
           else:
             tp += 1 
@@ -58,3 +58,6 @@ def performanceEvaluation(x_train, y_train, x_test, y_test):
     fnmr.append(fn/(fn+tp))
 
     plt.plot(fmr, fnmr)
+    plt.xlabel('False Match Rate')
+    plt.ylabel('False Non-Match Rate')
+    plt.show()
