@@ -18,7 +18,7 @@ Define the region of interest as 48X512 size. In this way, we can find regions c
  3. Iris Matching <br />
 We use LDA to reduce dimensionality and train the model. Then use the established model to classify the test dataset and check the correctness of our model.
 ## Briefly discuss the limitation(s) of the current design. How can you improve it?
-Our outer circle's boundary is not tight. It contains parts of the sclera area. It leads to the result that the normalization results is not so good. I haven't come up with an idea to solve it.
+Our outer circle's boundary is not tight. It contains parts of the sclera area. It leads to the result that the normalization results is not so good. We haven't come up with an idea to solve it.
 ## Peer evaluation form
 We did the group project and wrote those functions together. We all participated in brainstorming, searching materials, picking threshold and writing the functions. We did not separate the missions. Everyone in the group is responsible and willing to contribute to final work. 
 
