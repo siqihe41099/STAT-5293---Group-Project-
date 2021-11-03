@@ -24,7 +24,7 @@ def irisRecognition(imgs_train,imgs_test):
   for i in range(size_train):
     x_i, y_i, r_i, x_p, y_p, r_p = irisLocalization(imgs_train[i])
     normalized = irisNormalization(x_i, y_i, r_i, x_p, y_p, r_p, imgs_train[i])
-    #enhanced = ImageEnhancement(normalized)
+    #enhanced = irisEnhancement(normalized)
     #v = featureExtraction(enhanced, 9)
     v = featureExtraction(normalized, 9)
     x_train[k] = v[1]
