@@ -92,7 +92,6 @@ def irisLocalization(img_in):
   # Cover the pupil size to avoid find the inner circle
   img_sub3[0:(suby+subr+20), (subx-subr-20):(subx+subr+20)] = 0
   # Find the outer circle by using HoughCircles
-  # 98，118
   iris = cv2.HoughCircles(img_sub3, cv2.HOUGH_GRADIENT,1,250,param1=30,param2=10,minRadius=98,maxRadius=118)
   if iris is not None:
     output = img_in.copy()
