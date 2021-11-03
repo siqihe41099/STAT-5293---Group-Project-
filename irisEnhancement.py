@@ -23,8 +23,8 @@ def irisEnhancement(normalized):
   img_resize = cv2.resize(img_var, (N, M), interpolation = cv2.INTER_CUBIC)
   # Subtract the estimated background illumination from normalized image 
   # to remove the effects of illumination
-  img_illu = normalized#-img_resize
-  #img_illu = (img_illu-(np.min(img_illu)))/(np.max(img_illu)-np.min(img_illu))*255
+  img_illu = normalized-img_resize
+  img_illu = (img_illu-(np.min(img_illu)))/(np.max(img_illu)-np.min(img_illu))*255
 
   # Use histogram equalization to enhance the corrected image
   img_illu = img_illu.astype(np.uint8)
