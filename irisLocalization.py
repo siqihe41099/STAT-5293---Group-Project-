@@ -1,3 +1,7 @@
+import cv2
+import numpy as np
+
+
 def irisLocalization(img_in):
   # Since there are two graphs that has the min value at the edge, so we try to avoid this situation
   # We create a subset of original image
