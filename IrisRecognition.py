@@ -4,12 +4,12 @@ import matplotlib.pyplot as plt
 from sklearn.neighbors import NearestCentroid
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as lda
 
-from irisLocalization  import *
-from irisNormalization import *
-from irisEnhancement import *
-from featureExtraction import *
-from irisMatching      import *
-from performanceEnvaluation import *
+from IrisLocalization  import *
+from IrisNormalization import *
+from IrisEnhancement import *
+from FeatureExtraction import *
+from IrisMatching      import *
+from PerformanceEnvaluation import *
 
 def irisRecognition(imgs_train,imgs_test):
   size_train = len(imgs_train)
