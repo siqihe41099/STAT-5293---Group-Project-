@@ -53,3 +53,6 @@ def performanceEvaluation(x_train, y_train, x_test, y_test):
     fnmr.append(fn/(fn+tp))
 
     plt.plot(fmr, fnmr)
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('False Negative Rate')
+    plt.show()
