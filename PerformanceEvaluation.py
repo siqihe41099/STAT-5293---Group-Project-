@@ -1,7 +1,7 @@
 from prettytable import PrettyTable
 import cv2
 import matplotlib.pyplot as plt
-from irisMatching import *
+from IrisMatching import *
 
 from prettytable import PrettyTable
 def performanceEvaluation(x_train, y_train, x_test, y_test):
