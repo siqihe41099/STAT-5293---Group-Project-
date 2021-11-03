@@ -3,6 +3,7 @@ import cv2
 import matplotlib.pyplot as ply
 from irisMatching import *
 
+from prettytable import PrettyTable
 def performanceEvaluation(x_train, y_train, x_test, y_test):
   # Draw CRR curve
   dimension = [50,60,70,80,90,100,107]
@@ -29,6 +30,10 @@ def performanceEvaluation(x_train, y_train, x_test, y_test):
   print(table)
 
   # Draw ROC
+  sim = np.zeros((x_test_r.shape[0], centroids_r.shape[0]))
+  for i in range(sim.shape[0]): # 432
+    for j in range(sim.shape[1]): # 108
+      sim[i, j] = 1 - scipy.spatial.distance.cosine(x_test_r[i], centroids_r[j])
   fmr = []
   fnmr = []
   thresholds = np.linspace(0.4, 0.8, 20)
@@ -53,6 +58,3 @@ def performanceEvaluation(x_train, y_train, x_test, y_test):
     fnmr.append(fn/(fn+tp))
 
     plt.plot(fmr, fnmr)
-    plt.xlabel('False Positive Rate')
-    plt.ylabel('False Negative Rate')
-    plt.show()
