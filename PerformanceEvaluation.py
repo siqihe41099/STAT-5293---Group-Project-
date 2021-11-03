@@ -17,6 +17,7 @@ def performanceEvaluation(x_train, y_train, x_test, y_test):
   plt.xlabel('Dimensionality of the feature vector')
   plt.ylabel('Correct recgnition rate')
   plt.scatter(dimension,crr,marker='*')
+  plt.savefig("outputs/crr.png")
   plt.show()
 
   # Draw table
@@ -58,7 +59,8 @@ def performanceEvaluation(x_train, y_train, x_test, y_test):
     fmr.append(fp/(fp+tn))
     fnmr.append(fn/(fn+tp))
 
-    plt.plot(fmr, fnmr)
-    plt.xlabel('False Match Rate')
-    plt.ylabel('False Non-Match Rate')
-    plt.show()
+  plt.plot(fmr, fnmr)
+  plt.xlabel('False Match Rate')
+  plt.ylabel('False Non-Match Rate')
+  plt.savefig('outputs/roc.png')
+  plt.show()
