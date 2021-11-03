@@ -31,7 +31,7 @@ def irisRecognition(imgs_train,imgs_test):
     for j in range(len(degrees)):
       k += 1
       normalized_rotate = imgRotate(normalized, degrees[j])
-      #enhanced_rotate = ImageEnhancement(normalized_rotate)
+      #enhanced_rotate = irisEnhancement(normalized_rotate)
       #v_rotate = featureExtraction(enhanced_rotate, 9)
       v_rotate = featureExtraction(normalized_rotate, 9)
       x_train[k] = v_rotate[1]
@@ -42,7 +42,7 @@ def irisRecognition(imgs_train,imgs_test):
   for i in range(size_test):
     x_i, y_i, r_i, x_p, y_p, r_p = irisLocalization(imgs_test[i])
     normalized = irisNormalization(x_i, y_i, r_i, x_p, y_p, r_p, imgs_test[i])
-    #enhanced = ImageEnhancement(normalized)
+    #enhanced = irisEnhancement(normalized)
     #v = featureExtraction(enhanced, 9)
     v = featureExtraction(normalized, 9)
     x_test[i] = v[1]
@@ -53,3 +53,7 @@ def irisRecognition(imgs_train,imgs_test):
 
   # create CRR graph, 
   performanceEvaluation(x_train, y_train, x_test, y_test)
+
+imgs_train= [cv2.imread(file, cv2.IMREAD_GRAYSCALE) for file in sorted(glob.glob('datasets/CASIA Iris Image Database (version 1.0)/*/1/*.bmp'))]
+imgs_test= [cv2.imread(file, cv2.IMREAD_GRAYSCALE) for file in sorted(glob.glob('datasets/CASIA Iris Image Database (version 1.0)/*/2/*.bmp'))]
+irisRecognition(imgs_train,imgs_test)
