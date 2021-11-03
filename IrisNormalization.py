@@ -20,7 +20,8 @@ def irisNormalization(x_i, y_i, r_i, x_p, y_p, r_p, img_in):
       x_i_theta = x_p + r_i * np.cos(thetas[j]) 
       y_i_theta = y_p - r_i * np.sin(thetas[j]) 
       x, y = x_p_theta + (x_i_theta - x_p_theta) * i / M, y_p_theta + (y_i_theta - y_p_theta) * i / M
-
+      
+      # Check whether x,y exceeds the boundary, if it exceeds, then set the pixel value to the boundary pixel value.
       x = min(319, x) or max(0, x)
       y = min(279, y) or max(0, y)
       normalized[i, j] = img_in[int(y), int(x)]
