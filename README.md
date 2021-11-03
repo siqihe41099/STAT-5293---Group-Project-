@@ -20,32 +20,6 @@ We use LDA to reduce dimensionality and train the model. Then use the establishe
 ## Briefly discuss the limitation(s) of the current design. How can you improve it?
 Our outer circle's boundary is not tight. It contains parts of the sclera area. It leads to the result that the normalization results is not so good. I haven't come up with an idea to solve it.
 ## Peer evaluation form
+We did the group project and wrote those functions together. We all participated in brainstorming, searching materials, picking threshold and writing the functions. We did not separate the missions. Everyone in the group is responsible and willing to contribute to final work. 
 
-
-#### Iris Localization 
-Weiyi Jiang: <br />
-Dawei He: <br />
 Siqi He: <br />
-#### ImageEnhancement
-Weiyi Jiang: <br />
-Dawei He: <br />
-Siqi He: <br />
-#### FeatureExtraction
-Weiyi Jiang: <br />
-Dawei He: <br />
-Siqi He: <br />
-#### IrisMatching
-Weiyi Jiang: <br />
-Dawei He: <br />
-Siqi He: <br />
-#### PerformanceEvaluation
-Weiyi Jiang: <br />
-Dawei He: <br />
-Siqi He: <br />
-#### Others
-Weiyi Jiang: <br />
-Dawei He: <br />
-Siqi He: <br />
-
-
-
